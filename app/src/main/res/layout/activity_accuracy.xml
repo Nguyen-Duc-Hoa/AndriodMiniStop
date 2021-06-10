@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ActivityAccuracy">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_centerInParent="true"
+        android:paddingTop="20dp"
+        android:background="@drawable/ic_side_bg">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="20dp">
+
+            <LinearLayout
+                android:id="@+id/layoutHeader"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="228dp"
+                    android:layout_height="101dp"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentRight="true"
+                    android:src="@drawable/ic_register_hero" />
+
+                <TextView
+                    android:id="@+id/txt_label"
+                    style="@style/viewParent.headerText.NoMode"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:text="Are you a robot?"
+                    android:textColor="@color/whiteTextColor"
+                    android:textSize="25dp"
+                    android:textStyle="bold"
+                    tools:layout_editor_absoluteX="59dp"
+                    tools:layout_editor_absoluteY="38dp" />
+                <CheckBox
+                    android:id="@+id/cbRobot"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="20dp"
+                    android:shadowColor="@color/black"
+                    android:text="I'm not a robot"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layoutChoseImage"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/txt_2"
+                    android:layout_width="match_parent"
+                    android:layout_height="92dp"
+                    android:layout_marginTop="51dp"
+                    android:background="#1B37D5"
+                    android:gravity="center"
+                    android:text="Select all the flower"
+                    android:textColor="@color/whiteTextColor"
+                    android:textSize="20dp"
+                    tools:layout_editor_absoluteX="2dp"
+                    tools:layout_editor_absoluteY="100dp" />
+
+                <GridLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center">
+
+                    <ImageButton
+                        android:id="@+id/iBtn_fish"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/txt_2"
+                        android:layout_marginLeft="50dp"
+                        android:layout_marginTop="32dp"
+                        android:src="@drawable/fish" />
+
+                    <ImageButton
+                        android:id="@+id/iBtn_hoa1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/txt_2"
+                        android:layout_marginLeft="3dp"
+                        android:layout_marginTop="32dp"
+                        android:layout_toRightOf="@id/iBtn_fish"
+                        app:srcCompat="@drawable/hoa1" />
+
+                    <ImageButton
+                        android:id="@+id/iBtn_hoa2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_row="1"
+                        android:layout_column="0"
+                        android:layout_marginLeft="50dp"
+                        app:srcCompat="@drawable/hoa2" />
+
+                    <ImageButton
+                        android:id="@+id/iBtn_sanho"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/iBtn_fish"
+                        android:layout_toRightOf="@id/iBtn_hoa2"
+                        android:layout_marginLeft="3dp"
+                        app:srcCompat="@drawable/sanho" />
+
+                </GridLayout>
+                <Button
+                    style="@style/loginButton"
+                    android:id="@+id/BtnSubmit"
+                    android:text="Submit"
+                    android:textSize="@dimen/loginViewsMargin"
+                    android:gravity="center"
+                    android:layout_gravity="center_horizontal"/>
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+    </ScrollView>
+
+</RelativeLayout>
